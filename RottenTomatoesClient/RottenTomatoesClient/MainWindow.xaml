@@ -1,0 +1,87 @@
+﻿<Window x:Class="RottenTomatoesClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RottenTomatoesClient"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        Title="RottenTomatoes Parser" Height="650" Width="1000">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10 10 0 0" />
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="10*"/>
+
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Column="1" Grid.Row="0" Header="Построение графиков" Background="AliceBlue" VerticalAlignment="Center" Margin="10,0,10,0" Height="73" Width="650">
+            <StackPanel Orientation="Horizontal">
+                <Button Grid.Column="1" Grid.Row="0" Command="{Binding BuildLineChart}">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="Pencil" Width="25" Height="25" />
+                    </Button.Content>
+                </Button>
+                <StackPanel Orientation="Vertical" Margin="10 0 0 0">
+                    <Label Content="Ось x:"/>
+                    <ComboBox x:Name="ComboAxisX" Width="120" ItemsSource="{Binding Path=LineChartOptions}" SelectedValue="{Binding Path=ComboX}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10 0 0 0">
+                    <Label Content="Ось y:"/>
+                    <ComboBox x:Name="ComboAxisY" Width="120" ItemsSource="{Binding Path=LineChartOptions}" SelectedValue="{Binding Path=ComboY}"/>
+                </StackPanel>
+                <Button Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" Margin="30 0 0 0" Command="{Binding BuildBarChart}">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="BarChart" Width="30" Height="30" />
+                    </Button.Content>
+                </Button>
+                <StackPanel Orientation="Vertical" Margin="10 0 0 0">
+                    <Label Content="Вариант графика:"/>
+                    <ComboBox x:Name="ComboBar" Width="150" ItemsSource="{Binding Path=BarChartOptions}" SelectedValue="{Binding Path=ComboBar}"/>
+                </StackPanel>
+                <Button Grid.Column="1" Grid.Row="0" Margin="30 0 0 0" Command="{Binding GenerateReport}">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="File" Width="30" Height="30" />
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+            
+        </GroupBox>
+
+        <GroupBox Grid.Column="0" Grid.Row="0" Header="Меню:"  Background="AliceBlue" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="200">
+            <StackPanel Orientation="Horizontal">
+                <Button Grid.Column="0" HorizontalAlignment="Center" Command="{Binding LoadALLCommand}" VerticalAlignment="Top">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="download" Width="20"/>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="UpdateButton"  Grid.Column="0" HorizontalAlignment="Center" Command="{Binding UpdateCommand}" VerticalAlignment="Top" IsEnabled="False">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="check" Width="20"/>
+                    </Button.Content>
+                </Button>
+                <Button x:Name="DeleteButton" Grid.Column="0" HorizontalAlignment="Center" Command="{Binding DeleteCommand}" VerticalAlignment="Top" IsEnabled="False" >
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="trash" Width="20"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+        </GroupBox>
+        <DataGrid  Grid.Row="1" x:Name="dataGrid" CanUserAddRows="True" ItemsSource="{Binding FilmsList}" SelectedIndex="{Binding DataGridIndex}" SelectedItem="{Binding DataGridItem}" AutoGenerateColumns="True" MouseDoubleClick="EnableButtons" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,40,0,0" Width="734" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
