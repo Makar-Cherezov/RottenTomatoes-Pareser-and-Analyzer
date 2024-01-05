@@ -74,7 +74,7 @@ namespace RottenTomatoesParser
                             {
                                 break;
                             }
-                            else
+                            else 
                             {
                                 string headstr = head!.TextContent;
                                 if (headstr.Contains("Box Office"))
@@ -234,9 +234,13 @@ namespace RottenTomatoesParser
             { 
                 if (!birthplace!.TextContent.Contains("Not Available"))
                 {
-                    string loc = birthplace!.TextContent.Replace("\n", "");
+                    string loc = birthplace!.TextContent.Replace("\r\n", "");
+                    loc = loc.Replace("Birthplace:", "");
                     string[] temp = loc.Split(',');
-                    return temp.Last().Trim();
+                    loc = temp.Last().Trim();
+                    if (loc.Contains("United States"))
+                        loc = "USA";
+                    return loc;
                 }
                 else
                     return "Unknown";
