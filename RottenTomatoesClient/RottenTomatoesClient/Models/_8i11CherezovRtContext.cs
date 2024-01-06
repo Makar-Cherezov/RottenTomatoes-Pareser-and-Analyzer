@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace RottenTomatoesClient.Models;
 
@@ -22,8 +23,13 @@ public partial class _8i11CherezovRtContext : DbContext
     public virtual DbSet<Genre> Genres { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=sqlvt.main.tpu.ru;Database=8I11_Cherezov_RT;User ID=student3;Password=student3;TrustServerCertificate=True;");
+    {
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+        .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+        .AddUserSecrets<_8i11CherezovRtContext>()
+        .Build();
+        optionsBuilder.UseSqlServer(configuration.GetConnectionString(nameof(_8i11CherezovRtContext)));
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

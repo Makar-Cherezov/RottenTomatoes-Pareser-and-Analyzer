@@ -5,6 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <UserSecretsId>a39bec3d-e1a2-4ca2-a976-c6587b22bce2</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,6 +37,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
     <PackageReference Include="ScottPlot" Version="4.1.70" />
     <PackageReference Include="ScottPlot.WPF" Version="4.1.70" />
   </ItemGroup>
