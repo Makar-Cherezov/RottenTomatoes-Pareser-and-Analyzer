@@ -71,3 +71,10 @@ C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\
 C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\obj\Debug\net6.0-windows\RottenTomatoesClient.csproj.ResolveComReference.cache
 C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\bin\Debug\net6.0-windows\ScottPlot.dll
 C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\bin\Debug\net6.0-windows\ScottPlot.WPF.dll
+C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll

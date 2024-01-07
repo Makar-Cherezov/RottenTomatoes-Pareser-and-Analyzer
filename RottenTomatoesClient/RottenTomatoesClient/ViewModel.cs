@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -282,6 +283,23 @@ namespace RottenTomatoesClient
                 try
                 {
                     ReportGenerator.GenerateReport(ComboX, ComboY, ComboBar);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    
+                }
+            });
+        }
+
+        private Command? updateParsing;
+        public Command UpdateParsing
+        {
+            get => updateParsing ??= new Command(obj =>
+            {
+                try
+                {
+                    Process.Start("C:\\Учёба\\Архитектура ИС\\Курсовая\\RottenTomatoesParser\\RottenTomatoesParser\\bin\\Debug\\net6.0\\RottenTomatoesParser.exe");
                 }
                 catch (Exception ex)
                 {

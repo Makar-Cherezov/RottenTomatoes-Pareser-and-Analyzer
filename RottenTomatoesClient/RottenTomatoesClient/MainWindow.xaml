@@ -54,16 +54,19 @@
                     <Label Content="Вариант графика:"/>
                     <ComboBox x:Name="ComboBar" Width="150" ItemsSource="{Binding Path=BarChartOptions}" SelectedValue="{Binding Path=ComboBar}"/>
                 </StackPanel>
-                <Button Grid.Column="1" Grid.Row="0" Margin="30 0 0 0" Command="{Binding GenerateReport}">
-                    <Button.Content>
-                        <fa:ImageAwesome Icon="File" Width="30" Height="30" />
-                    </Button.Content>
-                </Button>
+                <StackPanel Margin="30 0 0 0" Orientation="Vertical">
+                    <Label Panel.ZIndex="1" Content="Отчёт:"/>
+                    <Button Grid.Column="1" Grid.Row="0" Margin="0 -10 0 0" Command="{Binding GenerateReport}">
+                        <Button.Content>
+                            <fa:ImageAwesome Icon="File" Width="30" Height="20" />
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
             </StackPanel>
             
         </GroupBox>
 
-        <GroupBox Grid.Column="0" Grid.Row="0" Header="Меню:"  Background="AliceBlue" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="200">
+        <GroupBox Grid.Column="0" Grid.Row="0" Header="Меню:"  Background="AliceBlue" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="230">
             <StackPanel Orientation="Horizontal">
                 <Button Grid.Column="0" HorizontalAlignment="Center" Command="{Binding LoadALLCommand}" VerticalAlignment="Top">
                     <Button.Content>
@@ -80,8 +83,14 @@
                         <fa:ImageAwesome Icon="trash" Width="20"/>
                     </Button.Content>
                 </Button>
+                <Button Grid.Column="0" Grid.Row="1"  Command="{Binding UpdateParsing}">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="Link" Width="25" Height="25" />
+                    </Button.Content>
+                </Button>
             </StackPanel>
         </GroupBox>
-        <DataGrid  Grid.Row="1" x:Name="dataGrid" CanUserAddRows="True" ItemsSource="{Binding FilmsList}" SelectedIndex="{Binding DataGridIndex}" SelectedItem="{Binding DataGridItem}" AutoGenerateColumns="True" MouseDoubleClick="EnableButtons" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,40,0,0" Width="734" Grid.ColumnSpan="2"/>
+        
+        <DataGrid  Grid.Row="1" x:Name="dataGrid" CanUserAddRows="True" ItemsSource="{Binding FilmsList}" SelectedIndex="{Binding DataGridIndex}" SelectedItem="{Binding DataGridItem}" AutoGenerateColumns="True" MouseDoubleClick="EnableButtons" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,34,0,0" Width="734" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
