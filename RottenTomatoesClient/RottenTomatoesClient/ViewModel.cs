@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.EntityFrameworkCore;
 using RottenTomatoesClient.Models;
+using System.Windows.Controls;
 
 namespace RottenTomatoesClient
 {
@@ -20,7 +21,7 @@ namespace RottenTomatoesClient
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
-
+        #region ViewBindings
         private ObservableCollection<FilmVM> filmsList;
         public ObservableCollection<FilmVM> FilmsList
         {
@@ -36,6 +37,7 @@ namespace RottenTomatoesClient
         }
         public ObservableCollection<string> LineChartOptions { get; set; }
         public ObservableCollection<string> BarChartOptions { get; set; }
+        
         private int dataGridIndex;
         public int DataGridIndex
         {
@@ -49,7 +51,7 @@ namespace RottenTomatoesClient
                 OnPropertyChanged();
             }
         }
-
+        
 
 
         private string comboX;
@@ -108,7 +110,9 @@ namespace RottenTomatoesClient
             }
         }
 
+        #endregion
 
+        
         public ViewModel() 
         {
             filmsList = new ();
@@ -139,7 +143,7 @@ namespace RottenTomatoesClient
                 {
                     using (var db = new _8i11CherezovRtContext())
                     {
-                        FilmsList.Clear();
+                        
                         FilmsList = new ObservableCollection<FilmVM>(db.Films
                             .Include(x => x.Director)
                             .Include(x => x.Genres)

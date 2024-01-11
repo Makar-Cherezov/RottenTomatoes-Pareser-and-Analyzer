@@ -22,6 +22,14 @@ public partial class _8i11CherezovRtContext : DbContext
 
     public virtual DbSet<Genre> Genres { get; set; }
 
+    internal ViewModel ViewModel
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         IConfigurationRoot configuration = new ConfigurationBuilder()

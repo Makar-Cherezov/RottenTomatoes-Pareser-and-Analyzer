@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RottenTomatoesClient
 build_property.ProjectDir = C:\Учёба\Архитектура ИС\Курсовая\RottenTomatoesClient\RottenTomatoesClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

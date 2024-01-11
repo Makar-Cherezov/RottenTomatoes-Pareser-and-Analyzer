@@ -11,6 +11,14 @@ namespace RottenTomatoesClient
 {
     public static class ReportGenerator
     {
+        internal static ViewModel ViewModel
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         internal static void Replace(string toFind, string toReplace, Word.Document wordDocument)
         {
             Word.Range range = wordDocument.StoryRanges[Word.WdStoryType.wdMainTextStory];

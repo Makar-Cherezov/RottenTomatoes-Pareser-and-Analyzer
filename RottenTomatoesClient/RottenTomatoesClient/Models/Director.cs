@@ -14,4 +14,12 @@ public partial class Director
     public string Birthplace { get; set; } = null!;
 
     public virtual ICollection<Film> Films { get; set; } = new List<Film>();
+
+    internal ViewModel ViewModel
+    {
+        get => default;
+        set
+        {
+        }
+    }
 }

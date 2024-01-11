@@ -15,6 +15,14 @@ namespace RottenTomatoesClient
 {
     public static class ChartsGenerator
     {
+        internal static ViewModel ViewModel
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         internal static void ShowLinePlot(string opt1, string opt2)
         {
             Plot myPlot = CreateLineChart(opt1, opt2);

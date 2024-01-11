@@ -21,4 +21,12 @@ public class FilmVM
     public double? BoxOffice { get; set; }
 
     public string Genres { get; set; } = null!;
+
+    internal ViewModel ViewModel
+    {
+        get => default;
+        set
+        {
+        }
+    }
 }

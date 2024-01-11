@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RottenTomatoesClient.ChartsGenerator">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAACAAABABAAAAAAAABEAAgAAAAAAAAAIAAQAA=</HashCode>
+      <FileName>ChartsGenerator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="RottenTomatoesClient.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RottenTomatoesClient.ReportGenerator">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>ReportGenerator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="RottenTomatoesClient.ViewModel" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>jAAGIUgAAiIIAAECKAAAAgAggAAEAAIAQAAAAIAABQE=</HashCode>
+      <FileName>ViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RottenTomatoesClient.Models._8i11CherezovRtContext">
+    <Position X="5.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAQAQAAAAAAIAAAAAEAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\_8i11CherezovRtContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="RottenTomatoesClient.Models.Director">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAQAEAAIAAAAAAAAAAEAgAA=</HashCode>
+      <FileName>Models\Director.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="RottenTomatoesClient.Models.Film">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAIgAAAAEAAAAIAAAAAECAAABAAAAAAAgEAgAA=</HashCode>
+      <FileName>Models\Film.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="RottenTomatoesClient.Models.FilmVM">
+    <Position X="6.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIgAAAAEAAAAIAAAAAECAAABAEAAAAAAAAgAA=</HashCode>
+      <FileName>Models\FimVM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="RottenTomatoesClient.Models.Genre">
+    <Position X="8.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAIAAAAAEAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\Genre.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

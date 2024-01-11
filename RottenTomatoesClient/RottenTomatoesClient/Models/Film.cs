@@ -24,4 +24,12 @@ public partial class Film
     public virtual Director Director { get; set; } = null!;
 
     public virtual ICollection<Genre> Genres { get; set; } = new List<Genre>();
+
+    internal ViewModel ViewModel
+    {
+        get => default;
+        set
+        {
+        }
+    }
 }

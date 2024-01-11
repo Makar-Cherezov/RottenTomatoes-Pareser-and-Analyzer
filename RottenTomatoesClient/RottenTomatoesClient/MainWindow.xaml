@@ -90,7 +90,7 @@
                 </Button>
             </StackPanel>
         </GroupBox>
-        
-        <DataGrid  Grid.Row="1" x:Name="dataGrid" CanUserAddRows="True" ItemsSource="{Binding FilmsList}" SelectedIndex="{Binding DataGridIndex}" SelectedItem="{Binding DataGridItem}" AutoGenerateColumns="True" MouseDoubleClick="EnableButtons" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,34,0,0" Width="734" Grid.ColumnSpan="2"/>
+
+        <DataGrid  Grid.Row="1" x:Name="dataGrid" CanUserAddRows="True" ItemsSource="{Binding FilmsList}" SelectedIndex="{Binding DataGridIndex}" SelectedItem="{Binding DataGridItem}" AutoGenerateColumns="True"  AutoGeneratingColumn="OnAutoGeneratingColumn" MouseDoubleClick="EnableButtons" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,34,0,0" Width="734" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
