@@ -221,6 +221,7 @@ namespace RottenTomatoesClient
                         Film? filmToUpdate = db.Films
                         .OrderByDescending(x => x.AudienceReviewRating)
                         .ThenByDescending(x => x.CriticsReviewRating)
+                        .Include(x => x.Director)
                         .ToList()
                         .ElementAt(DataGridIndex);
                         db.Attach(filmToUpdate);
